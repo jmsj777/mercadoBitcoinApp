@@ -1,0 +1,18 @@
+# The app will need to use the coins: BTC, BCH, ETH and LTC
+# the test wants the datas: 
+  #ticker.low,   
+  #ticker.high, 
+  #ticker.vol, 
+  #Próximas 20 ordens de compra na fila (valor e quantidade);
+  #Próximas 20 ordens de venda na fila (valor e quantidade).
+
+GET https://www.mercadobitcoin.net/api/BTC/ticker/
+Accept: application/json
+
+###
+GET https://www.mercadobitcoin.net/api/BTC/orderbook/
+Accept: application/json
+
+###
+GET https://www.mercadobitcoin.net/api/BTC/trades/
+Accept: application/json
