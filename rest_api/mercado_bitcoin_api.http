@@ -3,8 +3,8 @@
   #ticker.low,   
   #ticker.high, 
   #ticker.vol, 
-  #Próximas 20 ordens de compra na fila (valor e quantidade);
-  #Próximas 20 ordens de venda na fila (valor e quantidade).
+  #primeiros 20 itens de orderbook.asks
+  #ultimos 20 itens de orderbook.bids
 
 GET https://www.mercadobitcoin.net/api/BTC/ticker/
 Accept: application/json
