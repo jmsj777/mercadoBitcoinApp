@@ -1,6 +1,8 @@
 # mercado_bitcoin_app
 
-A new Flutter project.
+An app to consume the "Mercado Bitcoin" data api from https://www.mercadobitcoin.com.br/api-doc/
+
+## _need to be upgraded_
 
 ## Getting Started
 
