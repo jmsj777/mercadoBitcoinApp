@@ -18,8 +18,8 @@ The app lets you choose between 4 cryptos: Bitcoin, BCash, Ethereum and Litecoin
 ## Screenshots
 
 Here you can see two screenshots of the app
-![](https://imgur.com/tlpcQxv.png)
-![](https://i.imgur.com/l2DqJ0M.png)
+
+![](https://imgur.com/undefined)
 
 ## Setup:
 
