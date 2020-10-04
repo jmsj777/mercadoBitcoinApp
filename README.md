@@ -2,17 +2,30 @@
 
 An app to consume the "Mercado Bitcoin" data api from https://www.mercadobitcoin.com.br/api-doc/
 
-## _need to be upgraded_
+## Features
 
-## Getting Started
+The app lets you choose between 4 cryptos: Bitcoin, BCash, Ethereum and Litecoin, from each of these currencies, this app allows you to see:
 
-This project is a starting point for a Flutter application.
+- Minimum and Maximum value in the last 24 hours
+- Traded Volume
+- Next 20 asks and 20 bids on the line, with value and quantity
 
-A few resources to get you started if this is your first Flutter project:
+## Technologies used
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- Flutter
+- REST API
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+
+Here you can see two screenshots of the app
+![](https://imgur.com/tlpcQxv.png)
+![](https://i.imgur.com/l2DqJ0M.png)
+
+## Setup:
+
+Build with flutter and let it fly!
+
+## About me
+
+Computer Engineer from Uberaba MG, Brazil and enthusiast to new technologies
+contact: jmsj777@hotmail.com
