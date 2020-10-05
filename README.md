@@ -1,3 +1,5 @@
+![](https://imgur.com/UQcCfKx.png)
+
 # mercado_bitcoin_app
 
 An app to consume the "Mercado Bitcoin" data api from https://www.mercadobitcoin.com.br/api-doc/
@@ -19,7 +21,7 @@ The app lets you choose between 4 cryptos: Bitcoin, BCash, Ethereum and Litecoin
 
 Here you can see two screenshots of the app
 
-![](https://imgur.com/undefined)
+![](https://imgur.com/YQqMy8c.png)
 
 ## Setup:
 
