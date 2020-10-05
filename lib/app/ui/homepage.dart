@@ -2,6 +2,8 @@ import 'dart:convert';
 
 import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
+import 'package:mercado_bitcoin_app/app/services/api.dart';
+import 'package:mercado_bitcoin_app/app/services/api_service.dart';
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
@@ -23,12 +25,13 @@ class _MyHomePageState extends State<MyHomePage> {
   String _dropDownValue = 'BTC';
 
   Future<void> _initAttribs() async {
-    final resTicker = await http
-        .get("https://www.mercadobitcoin.net/api/$_dropDownValue/ticker");
-    final resOrderBook = await http
-        .get("https://www.mercadobitcoin.net/api/$_dropDownValue/orderbook");
+    final service = new APIService(new MercadoBitcoinAPI());
+    final resTickerParsed =
+        await service.getEndpointData(coin: _dropDownValue, method: "ticker");
 
-    Map<String, dynamic> resTickerParsed = json.decode(resTicker.body);
+    final resOrderBookParsed = await service.getEndpointData(
+        coin: _dropDownValue, method: "orderbook");
+
     final dateString = resTickerParsed['ticker']['date'];
     final date = DateTime.fromMicrosecondsSinceEpoch(dateString * 1000000);
     // print(date);
@@ -40,13 +43,11 @@ class _MyHomePageState extends State<MyHomePage> {
       _date = '${date.day}/${date.month}, at ${date.hour}:${date.minute}';
     });
 
-    Map<String, dynamic> resOrderBookParsed = json.decode(resOrderBook.body);
-
     var resAsks = resOrderBookParsed['asks'];
     var resBids = resOrderBookParsed['bids'];
+
     var listArrayAsks = new List<Widget>();
     var listArrayBids = new List<Widget>();
-
     for (var i = 0; i < 20; i++) {
       listArrayAsks.add(new Text(
           '${resAsks[resAsks.length - 1 - i][0].toStringAsFixed(1)}  /  ${resAsks[resAsks.length - 1 - i][1].toStringAsFixed(6)}'));
